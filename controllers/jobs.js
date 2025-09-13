@@ -3,11 +3,11 @@ const {StatusCodes} = require('http-status-codes');
 const {BadRequestError, NotFoundError} = require('../errors');
 
 const getAllJobs = async(req, res) => {
-  res.sent('get all jobs')
+  res.send('get all jobs')
 }
 
 const getJob = async(req, res) => {
-  res.sent('get job')
+  res.send('get job')
 }
 
 const createJob = async(req, res) => {
@@ -17,11 +17,11 @@ const createJob = async(req, res) => {
 }
 
 const updateJob = async(req, res) => {
-  res.sent('update job')
+  res.send('update job')
 }
 
 const deleteJob = async(req, res) => {
-  res.sent('delete job')
+  res.send('delete job')
 }
 
 module.exports = {
