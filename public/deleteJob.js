@@ -1,7 +1,8 @@
 import { showJobs } from "./jobs.js";
-import {  token, message } from "./index.js";
+import { enableInput, token, message } from "./index.js";
 
 export const deleteJob = async(id) => {
+  enableInput(false);
   const url = `/api/v1/jobs/${id}`;
   const method = 'DELETE';
   try {
@@ -20,4 +21,5 @@ export const deleteJob = async(id) => {
     console.error(err);
     message.textContent = "A communication error occurred.";
   }
+  enableInput(true);
 }
